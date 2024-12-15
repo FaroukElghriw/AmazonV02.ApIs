@@ -1,0 +1,15 @@
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\bin\Debug\net8.0\AmazonV02.Repository.deps.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\bin\Debug\net8.0\AmazonV02.Repository.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\bin\Debug\net8.0\AmazonV02.Repository.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\bin\Debug\net8.0\AmazonV02.Core.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\bin\Debug\net8.0\AmazonV02.Core.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.AssemblyInfo.cs
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV0.5DE41F9C.Up2Date
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\refint\AmazonV02.Repository.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\ref\AmazonV02.Repository.dll
