@@ -148,3 +148,6 @@ C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\obj\Debug\net8.0\ref\Am
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\AmazonV02.ApIs.staticwebassets.runtime.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\obj\Debug\net8.0\AmazonV02.ApIs.sourcelink.json

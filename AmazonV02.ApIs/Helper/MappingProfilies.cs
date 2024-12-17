@@ -12,6 +12,11 @@ namespace AmazonV02.ApIs.Helper
                 .ForMember(D => D.ProductBrand, O => O.MapFrom(S => S.ProductBrand.Name))
                 .ForMember(D => D.ProductType, O => O.MapFrom(S => S.ProductType.Name))
                 .ForMember(D => D.PictureUrl, O => O.MapFrom<ProductPictureUrlResolve>());
-        }
+
+            CreateMap<CustomerBasketDto, CustomerBasket>()
+                .ForMember(D=>D.Items, O=>O.MapFrom(S=>S.Items));
+            CreateMap<BasketItemDto, BasketItem>();
+
+		}
     }
 }

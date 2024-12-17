@@ -8,6 +8,7 @@ using AmazonV02.Repository;
 using AmazonV02.Repository.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 namespace AmazonV02.ApIs
 {
@@ -26,7 +27,14 @@ namespace AmazonV02.ApIs
 			{
 				options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnnection"));
 			});
+			builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
+			{
+				var connection = builder.Configuration.GetConnectionString("Redis");
+				return ConnectionMultiplexer.Connect(connection);
+			});
 			builder.Services.AddApplicationServices();
+			builder.Services.AddScoped(typeof(IBasketRepository), typeof(BasketRepository));
+		
 
 	
 

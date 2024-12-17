@@ -13,3 +13,4 @@ C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\refint\AmazonV02.Repository.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.pdb
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\ref\AmazonV02.Repository.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Repository\obj\Debug\net8.0\AmazonV02.Repository.sourcelink.json

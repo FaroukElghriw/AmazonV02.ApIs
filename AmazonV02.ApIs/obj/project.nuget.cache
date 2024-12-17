@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JcOIXHNfwR8=",
+  "dgSpecHash": "4CNEB88biZU=",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\source\\repos\\AmazonV02.ApIs\\AmazonV02.ApIs\\AmazonV02.ApIs.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,8 @@
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\stackexchange.redis\\2.8.22\\stackexchange.redis.2.8.22.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
