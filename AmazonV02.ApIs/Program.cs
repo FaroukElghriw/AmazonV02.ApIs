@@ -3,9 +3,12 @@ using AmazonV02.ApIs.Errors;
 using AmazonV02.ApIs.Extensions;
 using AmazonV02.ApIs.Helper;
 using AmazonV02.ApIs.MiddleWares;
+using AmazonV02.Core.Entites.Identity;
 using AmazonV02.Core.Repository;
 using AmazonV02.Repository;
 using AmazonV02.Repository.Data;
+using AmazonV02.Repository.Data.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
@@ -27,6 +30,10 @@ namespace AmazonV02.ApIs
 			{
 				options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnnection"));
 			});
+			builder.Services.AddDbContext<AppIdentityDbContext>(options =>
+			{
+				options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection"));
+			});
 			builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
 			{
 				var connection = builder.Configuration.GetConnectionString("Redis");
@@ -34,6 +41,8 @@ namespace AmazonV02.ApIs
 			});
 			builder.Services.AddApplicationServices();
 			builder.Services.AddScoped(typeof(IBasketRepository), typeof(BasketRepository));
+			builder.Services.AddIdentityService(builder.Configuration);
+		
 		
 
 	
@@ -49,6 +58,11 @@ namespace AmazonV02.ApIs
 				var dbContext= service.GetRequiredService<AmazonDbContext>();
 				await dbContext.Database.MigrateAsync();
 				await AmazonDbcontextDataSeed.DataSeedingasync(dbContext);
+				var identityDbContext = service.GetRequiredService<AppIdentityDbContext>();
+				await identityDbContext.Database.MigrateAsync();
+				var dbContextdata= service.GetRequiredService<UserManager<AppUser>>();
+				await AppIdentityDbContextDataSeed.SeedDataAsync(dbContextdata);
+				
 		
 			}
 			catch (Exception ex) 
@@ -66,6 +80,7 @@ namespace AmazonV02.ApIs
 			app.UseMiddleware<ExceptionMiddleWare>();
 			app.UseStatusCodePagesWithReExecute("/errors/{0}");
 			app.UseHttpsRedirection();
+			app.UseAuthentication();
 
 			app.UseAuthorization();
 			app.UseStaticFiles();

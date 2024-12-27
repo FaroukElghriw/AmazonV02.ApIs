@@ -10,3 +10,4 @@ C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Debug\net8.0\refint
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Debug\net8.0\AmazonV02.Core.pdb
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Debug\net8.0\ref\AmazonV02.Core.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Debug\net8.0\AmazonV02.Core.sourcelink.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Debug\net8.0\AmazonV02.Core.csproj.AssemblyReference.cache

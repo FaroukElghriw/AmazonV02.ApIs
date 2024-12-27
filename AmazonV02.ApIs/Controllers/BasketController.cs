@@ -26,10 +26,10 @@ namespace AmazonV02.ApIs.Controllers
 			return basket is null ? new CustomerBasket(BasketId) : basket;
 		}
 		[HttpPost]
-		public async Task<ActionResult<CustomerBasket>> UpdateCustomerBasket(CustomerBasket basket)
+		public async Task<ActionResult<CustomerBasketDto>> UpdateCustomerBasket(CustomerBasketDto basket)
 		{
-			//var mappedBasket = _mapper.Map<CustomerBasketDto, CustomerBasket>(basket);
-			var createOrUpdateBasket= await _basketRepo.UpdateCustomerBasketAsync(basket);
+			var mappedBasket = _mapper.Map<CustomerBasketDto, CustomerBasket>(basket);
+			var createOrUpdateBasket= await _basketRepo.UpdateCustomerBasketAsync(mappedBasket);
 			if (createOrUpdateBasket is null) return BadRequest(new ApiResponse(400));
 			return Ok(createOrUpdateBasket);
 		}

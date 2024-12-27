@@ -151,3 +151,11 @@ C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Amazon
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\StackExchange.Redis.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\obj\Debug\net8.0\AmazonV02.ApIs.sourcelink.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\AmazonV02.Services.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.ApIs\bin\Debug\net8.0\AmazonV02.Services.pdb

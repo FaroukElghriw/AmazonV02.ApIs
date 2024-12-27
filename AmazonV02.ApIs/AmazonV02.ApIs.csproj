@@ -1,3 +1,5 @@
+
+
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
@@ -17,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AmazonV02.Repository\AmazonV02.Repository.csproj" />
+    <ProjectReference Include="..\AmazonV02.Services\AmazonV02.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,3 +9,10 @@ C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\Am
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\refint\AmazonV02.Services.dll
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\AmazonV02.Services.pdb
 C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\ref\AmazonV02.Services.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\bin\Debug\net8.0\AmazonV02.Core.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\bin\Debug\net8.0\AmazonV02.Repository.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\bin\Debug\net8.0\AmazonV02.Core.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\bin\Debug\net8.0\AmazonV02.Repository.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\AmazonV02.Services.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\AmazonV02.Services.sourcelink.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Services\obj\Debug\net8.0\AmazonV0.1AD69B69.Up2Date
