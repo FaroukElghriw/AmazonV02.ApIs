@@ -1,7 +1,9 @@
 ﻿using AmazonV02.ApIs.DTOS;
 using AmazonV02.ApIs.Errors;
+using AmazonV02.ApIs.Extensions;
 using AmazonV02.Core.Entites.Identity;
 using AmazonV02.Core.Services;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -17,12 +19,14 @@ namespace AmazonV02.ApIs.Controllers
 		private readonly UserManager<AppUser> _userManager;
 		private readonly SignInManager<AppUser> _signInManager;
 		private readonly ITokenService _tokenService;
+		private readonly IMapper _mapper;
 
-		public AccountController(UserManager<AppUser> userManager , SignInManager<AppUser> signInManager,ITokenService tokenService)
+		public AccountController(UserManager<AppUser> userManager , SignInManager<AppUser> signInManager,ITokenService tokenService,IMapper mapper)
         {
 			_userManager = userManager;
 			_signInManager = signInManager;
 			_tokenService = tokenService;
+			_mapper = mapper;
 		}
 
 		[HttpPost("Login")]
@@ -75,5 +79,26 @@ namespace AmazonV02.ApIs.Controllers
 
 			});
 		}
+		[Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
+		[HttpGet("Address")]
+		public async Task<ActionResult<AddressDto>> GetUserAddress()
+		{
+			var user = await _userManager.FindUserAddressAsync(User);
+			var mappedAddres = _mapper.Map<Address, AddressDto>(user.Address);
+
+			return Ok(mappedAddres);
+		}
+		[HttpPut]
+		public async Task<ActionResult<AddressDto>> UpdateAddress(AddressDto model)
+		{
+			var addres= _mapper.Map<AddressDto, Address>(model);
+			var user = await _userManager.FindUserAddressAsync(User);
+			addres.Id = user.Address.Id;
+			user.Address = addres;
+			var result = await _userManager.UpdateAsync(user);
+			if (!result.Succeeded) return BadRequest(new ApiResponse(400));
+			return Ok(model);
+		}
+
     }
 }

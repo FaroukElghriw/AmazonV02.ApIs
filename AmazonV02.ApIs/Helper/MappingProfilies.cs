@@ -1,5 +1,6 @@
 ﻿using AmazonV02.ApIs.DTOS;
 using AmazonV02.Core.Entites;
+using AmazonV02.Core.Entites.Identity;
 using AutoMapper;
 
 namespace AmazonV02.ApIs.Helper
@@ -17,6 +18,7 @@ namespace AmazonV02.ApIs.Helper
                 .ForMember(D=>D.Items, O=>O.MapFrom(S=>S.Items));
             CreateMap<BasketItemDto, BasketItem>();
 
+            CreateMap<Address, AddressDto>().ReverseMap();
 		}
     }
 }

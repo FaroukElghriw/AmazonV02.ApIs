@@ -14,5 +14,6 @@ namespace AmazonV02.Repository.Data.Identity
         public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options):base(options) 
         { 
         }
+       public DbSet<Address> Addresses { get; set; }  
     }
 }
