@@ -46,6 +46,7 @@ namespace AmazonV02.ApIs.Controllers
 		[HttpPost("Register")]
 		public async Task<ActionResult<UserDto>> Register(RegisterDto model)
 		{
+			if (CheackEmailAsync(model.Email).Result.Value) return BadRequest(new ApiValidationErrorResponse() { Errors = new string []  { "Email is exist" } });
 			var user = new AppUser
 			{
 				DisplayName = model.DisplayName,
@@ -98,6 +99,12 @@ namespace AmazonV02.ApIs.Controllers
 			var result = await _userManager.UpdateAsync(user);
 			if (!result.Succeeded) return BadRequest(new ApiResponse(400));
 			return Ok(model);
+		}
+
+		[HttpGet("emailexist")]
+		public async Task<ActionResult<bool>> CheackEmailAsync(string email)
+		{
+			return await _userManager.FindByEmailAsync(email) is not null; 
 		}
 
     }
