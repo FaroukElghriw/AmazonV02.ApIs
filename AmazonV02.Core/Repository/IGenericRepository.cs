@@ -15,6 +15,10 @@ namespace AmazonV02.Core.Repository
 		Task<IReadOnlyList<T>> GetAllWithSpecAsync(ISepcification<T> spec);
 		Task<T> GetByIdWithSpecAsync(ISepcification<T> spec);
 		Task<int> GetCountWithSpec(ISepcification<T> spec);
+		Task Add(T entity);
+
+		void Update(T entity);
+		void Delete(T entity);
 
 
 	}

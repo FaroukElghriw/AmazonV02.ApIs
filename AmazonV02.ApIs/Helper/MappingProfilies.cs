@@ -19,6 +19,9 @@ namespace AmazonV02.ApIs.Helper
             CreateMap<BasketItemDto, BasketItem>();
 
             CreateMap<Address, AddressDto>().ReverseMap();
+            CreateMap<AddressDto, AmazonV02.Core.Entites.Order_Aggregate.Address>();
+            
+
 		}
     }
 }

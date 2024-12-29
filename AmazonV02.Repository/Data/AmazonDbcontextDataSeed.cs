@@ -1,4 +1,5 @@
 ﻿using AmazonV02.Core.Entites;
+using AmazonV02.Core.Entites.Order_Aggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,21 @@ namespace AmazonV02.Repository.Data
 
 						await amazonDb.SaveChangesAsync();
 					
+				}
+
+			}
+			if (!amazonDb.Set<DeliveryMethod>().Any())
+			{
+				var deliveryData = File.ReadAllText("C:\\Users\\Dell\\source\\repos\\AmazonV02.ApIs\\AmazonV02.Repository\\Data\\DataSeed\\delivery.json");
+				var  deliveyes = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
+				if (deliveyes is not null && deliveyes.Count > 0)
+				{
+					foreach (var method in deliveyes)
+						await amazonDb.Set<DeliveryMethod>().AddAsync(method);
+
+
+					await amazonDb.SaveChangesAsync();
+
 				}
 
 			}

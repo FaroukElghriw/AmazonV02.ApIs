@@ -19,7 +19,18 @@ namespace AmazonV02.Repository
         {
 			_amazonDb = amazonDb;
 		}
-        public async Task<IReadOnlyList<T>> GetAllAsync()
+
+		public async Task Add(T entity)
+		{
+			await _amazonDb.Set<T>().AddAsync(entity);
+		}
+
+		public  void Delete(T entity)
+		{
+			_amazonDb.Set<T>().Remove(entity);
+		}
+
+		public async Task<IReadOnlyList<T>> GetAllAsync()
 			             => await _amazonDb.Set<T>().ToListAsync();
 
 		public async Task<IReadOnlyList<T>> GetAllWithSpecAsync(ISepcification<T> spec)
@@ -39,6 +50,11 @@ namespace AmazonV02.Repository
 		public async Task<int> GetCountWithSpec(ISepcification<T> spec)
 		{
 			return await ApplySpecification(spec).CountAsync();
+		}
+
+		public void Update(T entity)
+		{
+			 _amazonDb.Set<T>().Update(entity);
 		}
 
 		private IQueryable<T> ApplySpecification(ISepcification<T> spec)
