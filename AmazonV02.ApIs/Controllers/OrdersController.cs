@@ -23,9 +23,9 @@ namespace AmazonV02.ApIs.Controllers
 		}
 
 		[HttpPost]
-		[ProducesResponseType(typeof(Order),StatusCodes.Status200OK)]
+		[ProducesResponseType(typeof(OrderToReturnDTO),StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
-		public async Task<ActionResult<Order>> CreateOrder(OrderDto model)
+		public async Task<ActionResult<OrderToReturnDTO>> CreateOrder(OrderDto model)
 		{
 			var buyerEmail = User.FindFirstValue(ClaimTypes.Email);
 			var shippingaddres = _mapper.Map<AddressDto, Address>(model.ShippingAddress);
@@ -33,6 +33,36 @@ namespace AmazonV02.ApIs.Controllers
 			if (order is null) return BadRequest(new ApiResponse(400));
 			return Ok(order);
 
+		}
+		[HttpGet]
+		[ProducesResponseType(typeof(IReadOnlyList<OrderToReturnDTO>) , StatusCodes.Status200OK)]
+		[ProducesResponseType(typeof (ApiResponse), StatusCodes.Status400BadRequest)]
+		public async Task<ActionResult<IReadOnlyList<OrderToReturnDTO>>> GetOrdersForUser()
+		{
+			var buyerEmail = User.FindFirstValue(ClaimTypes.Email);
+			var orders= await _orderService.GetOrdersForUserAsync(buyerEmail);
+			return Ok(orders);
+
+			
+		}
+		[ProducesResponseType(typeof(OrderToReturnDTO), StatusCodes.Status200OK)]
+		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+		[HttpGet("id")]
+		public async Task<ActionResult<OrderToReturnDTO>> GetOrderbyidForUse(int id)
+		{
+			var buyeremail= User.FindFirstValue(ClaimTypes.Email);
+
+			var order = await _orderService.GetOrderByIdForUserAsync(id, buyeremail);
+			return Ok(order);	
+		  
+		}
+		[ProducesResponseType(typeof(DeliveryMethod), StatusCodes.Status200OK)]
+		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+		[HttpGet("deliverymethod")]
+		public async Task<ActionResult<DeliveryMethod>> GetDeliverymethod()
+		{
+			var deliveryMethods= await _orderService.GetDeliveryMethodsAsync();
+			return Ok(deliveryMethods);
 		}
     }
 }

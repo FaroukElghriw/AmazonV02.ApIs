@@ -3,6 +3,7 @@ using AmazonV02.Core.Entites;
 using AmazonV02.Core.Entites.Order_Aggregate;
 using AmazonV02.Core.Repository;
 using AmazonV02.Core.Services;
+using AmazonV02.Core.Specifications.OrderSpec;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -57,14 +58,26 @@ namespace AmazonV02.Services
 
 		}
 
-		public Task<Order> GetOrderByIdForUserAsync(int orderId, string buyerEmail)
+		public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync()
 		{
-			throw new NotImplementedException();
+		   var deliveryMethods= await Unitofwork.Repository<DeliveryMethod>().GetAllAsync();
+			return deliveryMethods;
 		}
 
-		public Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail)
+		public async Task<Order> GetOrderByIdForUserAsync(int orderId, string buyerEmail)
 		{
-			throw new NotImplementedException();
+			var spec = new OrderSpecification(buyerEmail, orderId);
+			var order = await Unitofwork.Repository<Order>().GetByIdWithSpecAsync(spec);
+			return order;
 		}
+
+		public async Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail)
+		{
+			var spec= new OrderSpecification(buyerEmail);
+			var orders = await Unitofwork.Repository<Order>().GetAllWithSpecAsync(spec);
+			return orders;
+		}
+
+
 	}
 }

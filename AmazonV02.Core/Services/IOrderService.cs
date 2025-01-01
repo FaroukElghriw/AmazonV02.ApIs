@@ -14,5 +14,6 @@ namespace AmazonV02.Core.Services
 		Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail);
 
 		Task<Order> GetOrderByIdForUserAsync(int orderId, string buyerEmail);
+		Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync();
 	}
 }
