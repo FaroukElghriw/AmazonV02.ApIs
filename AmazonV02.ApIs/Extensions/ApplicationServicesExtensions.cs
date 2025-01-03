@@ -15,6 +15,7 @@ namespace AmazonV02.ApIs.Extensions
 		public static IServiceCollection AddApplicationServices( this IServiceCollection services)
 		{
 			services.AddScoped(typeof(IUnitofwork), typeof(Unitofwork));
+			services.AddScoped(typeof(IPaymentService), typeof(PaymentSerivce));
 			services.AddScoped(typeof(IOrderService),typeof(OrderService));
 			services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 		    services.AddAutoMapper(typeof(MappingProfilies));

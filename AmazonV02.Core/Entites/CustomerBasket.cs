@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,5 +15,9 @@ namespace AmazonV02.Core.Entites
         {
             Id = id;
         }
+        public string PaymentIntendId { get; set; }
+        public string ClinetSecret { get; set; }
+        public decimal ShippingCost   { get; set; }
+        public int? DeliveryMethodId { get; set; }
     }
 }
