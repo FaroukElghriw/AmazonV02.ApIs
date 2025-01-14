@@ -32,6 +32,7 @@ namespace AmazonV02.ApIs.Controllers
 		[ProducesResponseType(typeof(IReadOnlyList<ProductToReturnDTO>), StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
 		[HttpGet]
+		[CachedAtttibute(600)]
 		public async Task<ActionResult<Pagination<ProductToReturnDTO>>> Getall([FromQuery] ProductSpecParms parms)
 		{
 			var spec = new ProductWithBrandandTypeSpecification(parms);
@@ -45,6 +46,7 @@ namespace AmazonV02.ApIs.Controllers
 		[ProducesResponseType(typeof(Product), StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
 		[HttpGet("{id}")]
+		[CachedAtttibute(600)]
 		public async Task<ActionResult<Product>> GetbyId(int id)
 		{
 			var product = await _repository.GetByIdAsync(id);
@@ -53,6 +55,7 @@ namespace AmazonV02.ApIs.Controllers
 		[ProducesResponseType(typeof(IReadOnlyList<ProductBrand>),StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
 		[HttpGet("brands")]
+		[CachedAtttibute(600)]
 		public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetBrands()
 		{
 			var brands = await _brands.GetAllAsync();
@@ -62,6 +65,7 @@ namespace AmazonV02.ApIs.Controllers
 		[ProducesResponseType(typeof(IReadOnlyList<ProductType>), StatusCodes.Status200OK)]
 		[ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
 		[HttpGet("types")]
+		[CachedAtttibute(600)]
 		public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetTypes()
 		{
 			var types = await _types.GetAllAsync();

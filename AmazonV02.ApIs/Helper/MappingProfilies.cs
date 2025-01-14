@@ -19,7 +19,7 @@ namespace AmazonV02.ApIs.Helper
                 .ForMember(D=>D.Items, O=>O.MapFrom(S=>S.Items));
             CreateMap<BasketItemDto, BasketItem>();
 
-            CreateMap<Address, AddressDto>().ReverseMap();
+            CreateMap<AmazonV02.Core.Entites.Order_Aggregate.Address, AddressDto>().ReverseMap();
             CreateMap<AddressDto, AmazonV02.Core.Entites.Order_Aggregate.Address>();
 
 
@@ -27,11 +27,11 @@ namespace AmazonV02.ApIs.Helper
 				.ForMember(d => d.DeliveryMethod, O => O.MapFrom(S => S.DeliveryMethod.ShortName))
 				.ForMember(d => d.DeliveryMethodCost, O => O.MapFrom(S => S.DeliveryMethod.Cost));
 
-			CreateMap<OrderItem, OrderItemDTO>()
-				.ForMember(d => d.ProductId, O => O.MapFrom(S => S.Product.ProductId))
-				.ForMember(d => d.ProductName, O => O.MapFrom(S => S.Product.ProductName))
-				.ForMember(d => d.PictureUrl, O => O.MapFrom(S => S.Product.ProductPicture))
-				.ForMember(d => d.PictureUrl, O => O.MapFrom<Order>());
+            CreateMap<OrderItem, OrderItemDTO>()
+                .ForMember(d => d.ProductId, O => O.MapFrom(S => S.Product.ProductId))
+                .ForMember(d => d.ProductName, O => O.MapFrom(S => S.Product.ProductName))
+                .ForMember(d => d.PictureUrl, O => O.MapFrom(S => S.Product.ProductPicture));
+				//.ForMember(d => d.PictureUrl, O => O.MapFrom<Order>());
 
 		}
     }

@@ -14,6 +14,7 @@ namespace AmazonV02.ApIs.Extensions
 	{
 		public static IServiceCollection AddApplicationServices( this IServiceCollection services)
 		{
+			services.AddSingleton(typeof(IResponseCacheService), typeof(ResponseCacheService));
 			services.AddScoped(typeof(IUnitofwork), typeof(Unitofwork));
 			services.AddScoped(typeof(IPaymentService), typeof(PaymentSerivce));
 			services.AddScoped(typeof(IOrderService),typeof(OrderService));

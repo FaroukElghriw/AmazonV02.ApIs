@@ -653,7 +653,7 @@
           }
         }
       },
-      "StackExchange.Redis/2.8.22": {
+      "StackExchange.Redis/2.8.24": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
@@ -1054,6 +1054,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
+          "StackExchange.Redis": "2.8.24",
           "Stripe.net": "47.2.0"
         },
         "compile": {
@@ -2053,10 +2054,10 @@
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
-    "StackExchange.Redis/2.8.22": {
-      "sha512": "GRA97f4cHYxBI/fKOfgs3GyKklc5is6YKM2yWbkiCZGR/JKsXIo0sRJSSeJabriJAZkKFthM0rXnULFfSbs0KA==",
+    "StackExchange.Redis/2.8.24": {
+      "sha512": "GWllmsFAtLyhm4C47cOCipGxyEi1NQWTFUHXnJ8hiHOsK/bH3T5eLkWPVW+LRL6jDiB3g3izW3YEHgLuPoJSyA==",
       "type": "package",
-      "path": "stackexchange.redis/2.8.22",
+      "path": "stackexchange.redis/2.8.24",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2072,7 +2073,7 @@
         "lib/netcoreapp3.1/StackExchange.Redis.xml",
         "lib/netstandard2.0/StackExchange.Redis.dll",
         "lib/netstandard2.0/StackExchange.Redis.xml",
-        "stackexchange.redis.2.8.22.nupkg.sha512",
+        "stackexchange.redis.2.8.24.nupkg.sha512",
         "stackexchange.redis.nuspec"
       ]
     },
@@ -2910,8 +2911,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AmazonV02.Core >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.11",
-      "StackExchange.Redis >= 2.8.22"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.11"
     ]
   },
   "packageFolders": {
@@ -2966,10 +2966,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[8.0.11, )"
-          },
-          "StackExchange.Redis": {
-            "target": "Package",
-            "version": "[2.8.22, )"
           }
         },
         "imports": [
