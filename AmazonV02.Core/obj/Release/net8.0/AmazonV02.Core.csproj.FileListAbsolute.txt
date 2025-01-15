@@ -1,0 +1,13 @@
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\bin\Release\net8.0\AmazonV02.Core.deps.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\bin\Release\net8.0\AmazonV02.Core.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\bin\Release\net8.0\AmazonV02.Core.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.AssemblyInfo.cs
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.sourcelink.json
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\refint\AmazonV02.Core.dll
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\AmazonV02.Core.pdb
+C:\Users\Dell\source\repos\AmazonV02.ApIs\AmazonV02.Core\obj\Release\net8.0\ref\AmazonV02.Core.dll
